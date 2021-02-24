@@ -1,0 +1,10 @@
+<h2>Detalhes do Beneficiário <b>{{ product.nome }}</b></h2>
+
+<div *ngIf="product">  
+  <h4>Saldo Atual: {{ product.saldoAposentadoria }}</h4>  
+  <h4>Quantidade de Anos: {{ product.qtdAnosRecebimentoAposentadoria }}</h4>
+  <h4>Valor Mensal: {{ product.valorMensal }}</h4>
+
+  <button (click)="addToCart(product)">Buy</button>
+  
+</div>
