@@ -1,16 +1,21 @@
-<h3>Cart</h3>
+<h3>Realizar Aporte</h3>
 
+<!--
 <p>
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
+-->
 
 <div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.nome }} </span>
-  <span>{{ item.saldoAposentadoria }}</span>
+  <span>Beneficiário: {{ item.nome }} </span>  
+</div>
+<div class="cart-item" *ngFor="let item of items">
+  <span>Saldo Atual: R$ {{ item.saldoAposentadoria }}</span>
 </div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-
+  
+  <!--
   <div>
     <label for="name">
       Name
@@ -24,7 +29,15 @@
     </label>
     <input id="address" type="text" formControlName="address">
   </div>
+  -->
+  
+  <div>
+    <label for="valor">
+      Valor do Aporte
+    </label>
+    <input id="valor" type="text" formControlName="valor">
+  </div>
 
-  <button class="button" type="submit">Purchase</button>
+  <button class="button" type="submit">Confirmar Operação</button>
 
 </form>
