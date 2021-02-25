@@ -7,7 +7,6 @@ import { map } from 'rxjs/operators';
 })
 export class CartService {
   items = [];
-  beneficiarios = [];
   constructor(  
     private http: HttpClient
     ) {}
@@ -29,10 +28,4 @@ export class CartService {
   getShippingPrices() {
     return this.http.get('/assets/shipping.json');
   }
-
-  getBeneficiarios() {
-    this.http.get('localhost:8080/beneficiarios').pipe(map(beneficiario => {})).subscribe(result => {      
-    });
-  }
-  
 }

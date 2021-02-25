@@ -9,7 +9,6 @@ import { CartService } from '../cart.service';
 })
 export class ProductListComponent {
   products = products;
-  beneficiarios = this.cartService.getBeneficiarios();
   
   constructor(
     private cartService: CartService
@@ -24,7 +23,6 @@ export class ProductListComponent {
   }
   
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
