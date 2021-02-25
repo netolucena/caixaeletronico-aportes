@@ -1,31 +1,23 @@
 <h2>Lista de Beneficiários</h2>
 
 
+<!--
 	<div *ngFor="let product of products">
-
 		<h3>
 			 <a [title]="product.name + ' details'" [routerLink]="['/products',     product.id]">
       {{ product.nome }}
     </a>
 		</h3>
-
-    <!--
-    <p *ngIf="product.saldoAposentadoria">
-      <b>Saldo Atual: </b> {{ product.saldoAposentadoria }} 
-    </p>
-    -->
-    
-    <!-- 
-    <button (click)="share()">
-      Share
-    </button>
-
-    <app-product-alerts
-      [product]="product" 
-      (notify)="onNotify()">
-    </app-product-alerts>
-    -->
 	</div>
+-->
+
+  <div *ngFor="let beneficiario of beneficiarios | async">
+    <h3>
+      <a [title]="beneficiario.nome + ' details'" [routerLink]="['/products',     beneficiario.id]">
+        {{ beneficiario.nome }}
+      </a>
+    </h3>    
+  </div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

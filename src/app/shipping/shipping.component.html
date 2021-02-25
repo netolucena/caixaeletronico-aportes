@@ -4,3 +4,8 @@
   <span>{{ shipping.type }}</span>
   <span>{{ shipping.price | currency }}</span>
 </div>
+
+
+<div class="shipping-item" *ngFor="let beneficiario of beneficiarios | async">
+  <span>{{ beneficiario.nome }}</span>  
+</div>

@@ -32,4 +32,8 @@ export class CartComponent implements OnInit {
   ngOnInit() {
   }
 
+  aportar(item) {    
+    window.alert(item);
+  }
+
 }

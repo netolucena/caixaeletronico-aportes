@@ -9,6 +9,7 @@ import { CartService } from '../cart.service';
 export class ShippingComponent implements OnInit {
   
   shippingCosts = this.cartService.getShippingPrices();
+  beneficiarios = this.cartService.getBeneficiarios();
   
   constructor(
     private cartService: CartService
