@@ -1,23 +1,20 @@
-<h2>Lista de Beneficiários</h2>
+<h2>Insira o valor do aporte e clique em REALIZAR APORTE no Beneficiário escolhido</h2>
 
-
-<!--
-	<div *ngFor="let product of products">
-		<h3>
-			 <a [title]="product.name + ' details'" [routerLink]="['/products',     product.id]">
-      {{ product.nome }}
-    </a>
-		</h3>
-	</div>
--->
-
+<form [formGroup]="itemsForm" (ngSubmit)="onSubmit()">
+  <label for="valor"> Valor do Aporte</label>
+  <input id="valor" type="text" formControlName="valor"/>
+  <h2>Lista de Beneficiários</h2>
+ 
   <div *ngFor="let beneficiario of beneficiarios | async">
     <h3>
-      <a [title]="beneficiario.nome + ' details'" [routerLink]="['/products',     beneficiario.id]">
+      <a [title]="beneficiario.nome + ' details'" [routerLink]="['/products', beneficiario.id]">
         {{ beneficiario.nome }}
       </a>
     </h3>    
+    <button (click)="aportar(beneficiario)">Realizar Aporte</button>
   </div>
+
+</form>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

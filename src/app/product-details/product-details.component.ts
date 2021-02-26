@@ -21,6 +21,10 @@ export class ProductDetailsComponent implements OnInit {
     window.alert('Beneficiário Selecionado para aporte!');
   }
 
+  aportarValor(product) {        
+    this.cartService.aportarValor(product);    
+  }
+
   ngOnInit() { 
   // First get the product id from the current route.
   const routeParams = this.route.snapshot.paramMap;
