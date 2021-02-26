@@ -23,15 +23,7 @@ export class ProductListComponent {
     private http: HttpClient,
   ) { }
 
-  share() {
-    window.alert('The product has been shared!');
-  }
-
-  onNotify() {
-    window.alert('Aporte Realizado com Sucesso!');
-  }
-
-    onSubmit(): void {
+  onSubmit(): void {
     this.products = this.cartService.clearCart();
     this.cartService.getBeneficiarios();
     this.itemsForm.reset();
@@ -44,9 +36,10 @@ export class ProductListComponent {
     
     window.alert('Aporte de R$ ' + product.valor.value +' Realizado com Sucesso! para ' + product.nome );
     
-    this.cartService.aportarValor(product).subscribe((res) => {
-      window.alert('Aporte realizado com Sucesso!');
+    this.cartService.aportarValor(product).subscribe((res) => {      
     });
+
+    window.location.reload();
   }
   
 }
