@@ -33,7 +33,7 @@ export class ProductListComponent {
     this.cartService.clearCart();
     this.cartService.addToCart(product);
     product.valor = this.itemsForm.get("valor").value;  
-    window.alert('Aporte de R$ ' + product.valor +' realizado com sucesso para ' + product.nome );
+    //window.alert('Aporte de R$ ' + product.valor +' realizado com sucesso para ' + product.nome );
     
     this.cartService.aportarValor(product).subscribe((res) => { });
   }

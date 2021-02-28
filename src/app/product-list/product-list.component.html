@@ -10,10 +10,11 @@
     <p>Saldo Atual: {{ beneficiario.saldoAposentadoria }}<p>
     <p>Quantidade de Anos: {{ beneficiario.qtdAnosRecebimentoAposentadoria }}<p>
     <p>Valor Mensal: {{ beneficiario.valorMensal }}<p>
-
-    <button (click)="aportar(beneficiario)">Realizar Aporte</button>
+    
+    <a routerLink="/cart" class="button fancy-button">
+      <button (click)="aportar(beneficiario)">Realizar Aporte</button>
+    </a>
   </div>
-
 </form>
 
 <!-- 

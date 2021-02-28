@@ -1,27 +1,10 @@
-<h3>Realizar Aporte</h3>
-
-<!--
-<p>
-  <a routerLink="/shipping">Shipping Prices</a>
-</p>
--->
-
+<h3>Operação de aporte realizada com sucesso!</h3>
 <div class="cart-item" *ngFor="let item of items">
   <span>Beneficiário: {{ item.nome }} </span>  
 </div>
-<div class="cart-item" *ngFor="let item of items">
-  <span>Saldo Atual: R$ {{ item.saldoAposentadoria }}</span>
-</div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  
-  <div>
-    <label for="valor">
-      Valor do Aporte
-    </label>
-    <input id="valor" type="text" formControlName="valor">
-  </div>
-
-  <button class="button" type="submit">Confirmar Operação</button>
-
+  <a routerLink="/" class="button fancy-button">
+    <button>Voltar</button>
+  </a>
 </form>

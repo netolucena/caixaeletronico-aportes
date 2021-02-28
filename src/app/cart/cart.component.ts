@@ -22,8 +22,7 @@ export class CartComponent implements OnInit {
       private formBuilder: FormBuilder,
   ) { }
 
-  onSubmit(): void {
-    // Process checkout data here
+  onSubmit(): void {    
     this.items = this.cartService.clearCart();
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
@@ -31,9 +30,4 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  aportar(item) {    
-    window.alert(item);
-  }
-
 }
