@@ -28,20 +28,15 @@ export class ProductListComponent {
     this.cartService.getBeneficiarios();
     this.itemsForm.reset();
   }
-
+  
   aportar(product) {
     this.cartService.clearCart();
     this.cartService.addToCart(product);
-    product.valor = this.itemsForm.get("valor");
+    product.valor = this.itemsForm.get("valor").value;  
+    window.alert('Aporte de R$ ' + product.valor +' realizado com sucesso para ' + product.nome );
     
-    window.alert('Aporte de R$ ' + product.valor.value +' Realizado com Sucesso! para ' + product.nome );
-    
-    this.cartService.aportarValor(product).subscribe((res) => {      
-    });
-
-    window.location.reload();
+    this.cartService.aportarValor(product).subscribe((res) => { });
   }
-  
 }
 
 /*

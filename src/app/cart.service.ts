@@ -39,14 +39,14 @@ export class CartService {
 
   getBeneficiarios() {
     this.beneficiarios = [];
-    return this.http.get('http://localhost:8080/beneficiarios');
+    return this.http.get('http://ec2-3-134-107-142.us-east-2.compute.amazonaws.com:8080/beneficiarios');
   }
 
   aportarValor(beneficiario) {
-    //return this.http.post('http://localhost:8080/beneficiarios');
     let valorAporte_ = beneficiario.valor;
     let id_ = beneficiario.id;
-    return this.http.post<any>('http://localhost:8090/caixa?valorAporte='+ '25' + '&idBeneficiario=' + id_, { });
+    return this.http.post<any>('http://ec2-3-134-107-142.us-east-2.compute.amazonaws.com:8090/caixa?valorAporte='+ valorAporte_ + '&idBeneficiario=' + id_, { }
+    );
   }
   
 }
