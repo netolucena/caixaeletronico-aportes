@@ -1,6 +1,5 @@
-<h2>Insira o valor do aporte e clique em REALIZAR APORTE no Beneficiário escolhido</h2>
-
 <form [formGroup]="itemsForm" (ngSubmit)="onSubmit()">
+  <h2>Insira o valor do aporte e clique em REALIZAR APORTE no Beneficiário escolhido</h2>
   <label for="valor"> Valor do Aporte</label>
   <input id="valor" type="text" formControlName="valor"/>
   <h2>Lista de Beneficiários</h2>
@@ -15,6 +14,10 @@
       <button (click)="aportar(beneficiario)">Realizar Aporte</button>
     </a>
   </div>
+
+  <h2>Cadastrar um novo Beneficiário</h2>
+
+
 </form>
 
 <!-- 
