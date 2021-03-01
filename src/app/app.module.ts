@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './beneficiarios-list/beneficiarios-list.component';
-import { ProductDetailsComponent }  from './product-details/product-details.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 
@@ -18,7 +17,6 @@ import { CartComponent } from './cart/cart.component';
     ReactiveFormsModule,    
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
     ])
   ],
@@ -26,7 +24,6 @@ import { CartComponent } from './cart/cart.component';
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ProductDetailsComponent,
     CartComponent,
   ],
   bootstrap: [

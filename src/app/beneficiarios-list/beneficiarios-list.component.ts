@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { products } from '../products';
 import { CartService } from '../cart.service';
 import { FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -10,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./beneficiarios-list.component.css']
 })
 export class ProductListComponent {
-  products = products;
   beneficiarios = this.cartService.getBeneficiarios();
 
   itemsForm = this.formBuilder.group({    
@@ -24,7 +22,6 @@ export class ProductListComponent {
   ) { }
 
   onSubmit(): void {
-    this.products = this.cartService.clearCart();
     this.cartService.getBeneficiarios();
     this.itemsForm.reset();
   }
