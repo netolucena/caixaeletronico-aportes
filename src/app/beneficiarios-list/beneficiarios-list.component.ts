@@ -5,9 +5,9 @@ import { FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-beneficiarios-list',
+  templateUrl: './beneficiarios-list.component.html',
+  styleUrls: ['./beneficiarios-list.component.css']
 })
 export class ProductListComponent {
   products = products;
